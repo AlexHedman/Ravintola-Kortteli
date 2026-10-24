@@ -1,4 +1,4 @@
-/* Ravintola Kortteli – vaihe 2: värit, fontit, box model */
+/* Ravintola Kortteli – vaihe 3: Flexbox-layout */
 
 * {
   box-sizing: border-box;
@@ -11,13 +11,21 @@ body {
   line-height: 1.6;
   color: #1c1917;
   background-color: #f5f0e8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header,
-footer {
+/* Header: logo ja nav samalla rivillä */
+header {
   background-color: #1c1917;
   color: #f5f0e8;
   padding: 1.25rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo {
@@ -26,15 +34,14 @@ footer {
   letter-spacing: 0.06em;
 }
 
+/* Navigaatio Flexboxilla vaakaan */
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 0.75rem 0 0 0;
-}
-
-nav li {
-  display: inline;
-  margin-right: 1.25rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 
 nav a {
@@ -49,9 +56,25 @@ nav a:hover {
 }
 
 main {
-  max-width: 800px;
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Korttirivi: Flexbox */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #fffdf8;
+  border: 1px solid #e4d8c4;
+  padding: 1.5rem;
+  flex: 1 1 260px; /* vierekkäin isolla, allekkain pienellä */
 }
 
 section {
@@ -67,7 +90,13 @@ h2 {
   color: #3f2e22;
 }
 
+footer {
+  background-color: #1c1917;
+  color: #f5f0e8;
+  padding: 1.25rem 2rem;
+}
+
 footer p {
   margin: 0;
   font-size: 0.9rem;
-}/* Vaihe 2: värit, fontit ja box model */
+}
