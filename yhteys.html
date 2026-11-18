@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -44,6 +45,37 @@
           allowfullscreen>
         </iframe>
       </div>
+    </section>
+
+    <!-- Vaihe 5: Yhteydenottolomake -->
+    <section>
+      <h2>Ota yhteyttä</h2>
+      <p>Voit lähettää meille kysymyksiä ja palautetta lomakkeella.</p>
+
+      <form class="contact-form" onsubmit="return false;">
+        <label for="nimi">Nimi *</label>
+        <input type="text" id="nimi" name="nimi" required minlength="2">
+
+        <label for="sahkoposti">Sähköposti *</label>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+
+        <label for="puhelin">Puhelinnumero</label>
+        <input type="tel" id="puhelin" name="puhelin">
+
+        <label for="aihe">Yhteydenoton aihe *</label>
+        <select id="aihe" name="aihe" required>
+          <option value="">Valitse aihe</option>
+          <option value="varaus">Pöytävaraus</option>
+          <option value="palaute">Palaute</option>
+          <option value="muu">Muu kysymys</option>
+        </select>
+
+        <label for="viesti">Viesti *</label>
+        <textarea id="viesti" name="viesti" rows="5" required minlength="10"></textarea>
+
+        <button type="submit">Lähetä</button>
+        <p><small>* Pakollinen kenttä. Lomake on harjoitustyö eikä lähetä viestejä.</small></p>
+      </form>
     </section>
   </main>
 
