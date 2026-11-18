@@ -165,3 +165,40 @@ header {
   max-width: 100%;
   position: relative;
 }
+
+
+/* Vaihe 5: Ruokalistan taulukko */
+
+.menu-prices table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.menu-prices th,
+.menu-prices td {
+  padding: 12px 15px;
+  border: 1px solid #e4d8c4;
+  text-align: left;
+}
+
+.menu-prices th {
+  background-color: #1c1917;
+  color: #f5f0e8;
+}
+
+.menu-prices tbody tr:nth-child(even) {
+  background-color: #f5f0e8;
+}
+
+.menu-prices th:last-child,
+.menu-prices td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .menu-prices {
+    overflow-x: auto;
+  }
+}
